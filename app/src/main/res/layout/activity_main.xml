@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/date"
+        android:padding="7dp"
+        android:text="JUN 11, 2017"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        tools:ignore="RtlCompat">
+
+        <LinearLayout
+            android:id="@+id/section_convert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+
+
+            <RadioGroup
+                android:background="@drawable/round_bg"
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/coin2coin"
+                    android:layout_width="0dp"
+                    android:textSize="10dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Money to Money" />
+
+
+                <RadioButton
+                    android:id="@+id/coin2Money"
+                    android:layout_width="0dp"
+                    android:textSize="10dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Coin to Money" />
+
+
+                <RadioButton
+                    android:textSize="10dp"
+                    android:id="@+id/money2coin"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Money To coin" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/section_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_bg"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:layout_below="@id/section_convert"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp" />
+
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/fromSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/solid_round_shape"
+                app:ms_background_color="@color/colorPrimary"
+                app:ms_text_color="@color/colorAccent" />
+
+
+            <TextView
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp" />
+
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/ToSpinner"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/solid_round_shape"
+                app:ms_background_color="@color/colorPrimary"
+                android:textColor="@color/colorAccent"
+                />
+            <!--app:ms_background_color="@color/colorPrimary"-->
+            <!--app:ms_text_color="@color/colorAccent"-->
+
+        </LinearLayout>
+
+        <Button
+            android:background="@drawable/solid_round_shape"
+            android:textColor="@color/white"
+            android:id="@+id/btn_converter"
+            android:text="CONVERT"
+            android:layout_margin="16dp"
+            android:layout_below="@id/section_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.v7.widget.CardView
+            android:layout_below="@id/btn_converter"
+            app:cardElevation="4dp"
+            android:padding="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/coinImage"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp" />
+                
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" />
+                
+                
+                
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>
