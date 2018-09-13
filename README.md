@@ -14,8 +14,9 @@ App uses The cryptocompare API(https://min-api.cryptocompare.com).
     $ git clone https://github.com/mmahmoudothman/AndroidCurrentConvertor.git
 
 ## License
-Copyright 2017 MahmoudOthman
-
+   
+    Copyright 2017 MahmoudOthman
+   
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
